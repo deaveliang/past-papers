@@ -1,6 +1,6 @@
 # Question (a)
-# Initialise a 2D array, jobs, and a variable, numberOfJobs.
 
+# Initialise a 2D array, jobs, and a variable, numberOfJobs.
 jobs = [[None for i in range(2)] for j in range(100)]
 numberOfJobs = 0
 
