@@ -38,27 +38,33 @@ addJob(78, 1)
 
 # Question (e)
 
-# Find the lowest priority and store the index.
-# Swap the element at index_floor with the element with the lowest priority.
-# Increment index_floor by 1.
-# Repeat again.
+"""
+Find the lowest priority and store the index.
+Swap the element at index_floor with the element with the lowest priority.
+Increment index_floor by 1.
+Repeat again.
+"""
 
-def insertionSort():
+def selectionSort():
     for i in range(numberOfJobs - 1): # Subtract one becasue the last element is already sorted.
-        lowest_priority = 11
-        lowest_index = 0
-        swap = False
+        lowest_priority = jobs[i][1]
+        lowest_index = i
 
-        for j in range(i, numberOfJobs):
+        for j in range(i + 1, numberOfJobs):
             if jobs[j][1] < lowest_priority:
                 lowest_priority = jobs[j][1]
                 lowest_index = j
-                swap = True
 
-        if swap:
-            temp = jobs[i]
-            jobs[i] = jobs[lowest_index]
-            jobs[lowest_index] = temp
+        temp = jobs[i]
+        jobs[i] = jobs[lowest_index]
+        jobs[lowest_index] = temp
+
+"""
+Start with the second element, since the first element is assume to be sorted.
+Compare second element with the first element if the second is smaller swap them.
+Move to the third element, compare it with first two, and put it in its correct position
+Repeat until array is sorted.
+"""
 
 # Question (f)
 
@@ -69,5 +75,5 @@ def printArray():
 
 # Question (g)(i)
 
-insertionSort()
+selectionSort()
 printArray()
