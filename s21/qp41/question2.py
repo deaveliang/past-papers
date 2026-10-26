@@ -23,13 +23,12 @@ else:
 
 # Question (c)
 def bubbleSort():
-    temp = None
     for i in range(arrayLength):
         for j in range(arrayLength - 1):
             if arrayData[j] >= arrayData[j + 1]:
-                temp = arrayData[j]
+                tmp = arrayData[j]
                 arrayData[j] = arrayData[j + 1]
-                arrayData[j + 1] = temp
+                arrayData[j + 1] = tmp
 
 bubbleSort()
 print(arrayData)
