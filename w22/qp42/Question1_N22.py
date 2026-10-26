@@ -38,13 +38,6 @@ addJob(78, 1)
 
 # Question (e)
 
-"""
-Find the lowest priority and store the index.
-Swap the element at index_floor with the element with the lowest priority.
-Increment index_floor by 1.
-Repeat again.
-"""
-
 def selectionSort():
     for i in range(numberOfJobs - 1): # Subtract one becasue the last element is already sorted.
         lowest_priority = jobs[i][1]
@@ -58,13 +51,6 @@ def selectionSort():
         temp = jobs[i]
         jobs[i] = jobs[lowest_index]
         jobs[lowest_index] = temp
-
-"""
-Start with the second element, since the first element is assume to be sorted.
-Compare second element with the first element if the second is smaller swap them.
-Move to the third element, compare it with first two, and put it in its correct position
-Repeat until array is sorted.
-"""
 
 # Question (f)
 
