@@ -61,3 +61,19 @@ copy = open("copy.txt", "w")
 for item in array:
     copy.write(f"{item}\n")
 copy.close()
+
+# Store multiple values, which are seperated by commas.
+data_array = []
+data_file = open("data.txt", "r")
+for line in data_file:
+    data_array.append(line.strip().split(","))
+data_file.close()
+
+for i in range(len(data_array)):
+    for j in range(len(data_array[i])):
+        print(data_array[i][j], end=" ")
+    print()
+
+# You can also store the values in different variables instead of a single array.
+line = "Deave,17,Male"
+name, age, gender = line.split(",")
