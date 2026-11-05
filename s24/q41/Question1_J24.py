@@ -21,6 +21,7 @@ def initialise():
 
 numberItems = 0
 initialise()
+print(dataStored)
 
 # Question 1(d)(i)
 
